@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 from PyQt4 import QtGui, QtCore
 import sys
 import qdarkstyle
