@@ -1,11 +1,7 @@
 # Requirements
-*libqt4*
-*pip3
+PyQt4 , pip3
   
 # Installing
-*To install pip3, use this command 'sudo apt install python3-pip'
-*To install the Python3 library PyQt4, open your terminal and type 'sudo apt install libqt4*'
-*Finaly install all the requirements.txt libraries using 'pip3 install requirements.txt'
   
 # Executing
 *python3 calculator.py
