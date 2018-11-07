@@ -1,0 +1,2 @@
+QDarkStyle==2.6.1
+PyQt5

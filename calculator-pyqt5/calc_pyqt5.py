@@ -1,15 +1,16 @@
 #!/usr/bin/python3
-from PyQt4 import QtGui, QtCore
+from PyQt5.QtWidgets import QApplication, QWidget, QMainWindow
+from PyQt5 import QtCore
 import sys
 import qdarkstyle
 
-from main import Ui_MainWindow
+from main5 import Ui_MainWindow
 
 
-class MyApp(QtGui.QMainWindow):
+class MyApp(QMainWindow):
 
     def __init__(self, parent=None):
-        QtGui.QWidget.__init__(self, parent)
+        QWidget.__init__(self, parent)
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
         self.ui.button_0.clicked.connect(self.put0)
@@ -109,7 +110,6 @@ class MyApp(QtGui.QMainWindow):
 
     def keyPressEvent(self, e):
         key = e.key()
-        print(key)
         if key in range(37, 62):
             original = self.ui.lineEdit.text()
             self.ui.lineEdit.setText(str(original+chr(key)))
@@ -139,9 +139,9 @@ class MyApp(QtGui.QMainWindow):
 
 
 if __name__ == "__main__":
-    app = QtGui.QApplication(sys.argv)
+    app = QApplication(sys.argv)
     myapp = MyApp()
-    dark_style = qdarkstyle.load_stylesheet_pyqt()
+    dark_style = qdarkstyle.load_stylesheet_pyqt5()
     myapp.setStyleSheet(dark_style)
     myapp.show()
     sys.exit(app.exec_())
